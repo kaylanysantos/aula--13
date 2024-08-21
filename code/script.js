@@ -47,4 +47,4 @@ const Biblioteca = {
   removerLivro(titulo) {},
 
   exibirLivros() {}
-};
+}; 

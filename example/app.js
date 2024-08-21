@@ -1,12 +1,28 @@
-const ContaBancaria = {
-  constructor(titular, saldo) {
+function ContaBancaria (titular, saldo) {
     this.titular = titular;
     this.saldo = saldo;
+
+ this.depositar = function (valor) {
+  this.saldo += valor
+  console.log(`saldo de R$${valor} depositadocom sucesso`)
   },
 
-  depositar: function (valor) {},
+this.retirar = function (valor) {
+  if (this.saldo > valor) {
+    this.saldo -= valor
+    console.log(`saldo de R$${valor} depositadocom sucesso`)
+  } else {
+    console.log(`saldo é insuficiente`)
+  }
+},
 
-  retirar: function (valor) {},
+this.consultarSaldo = function () {
+  console.log(`\nTitular: ${this.titular}\nSaldo: ${this.saldo}`)
+}
+}; 
 
-  consultarSaldo: function () {}
-};
+const kaylanysantos = new ContaBancaria("kaylany santos", 2  )
+
+kaylanysantos.depositar(10)
+
+
